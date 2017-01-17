@@ -28,7 +28,9 @@ if 'PASSWORD' in os.environ:
     del os.environ['PASSWORD']
     # Disnable 'token' based authentication
     c.NotebookApp.token = u''
-__EOF__
+
 # else default to the token based authentication
+
+__EOF__
 
 chown -R jupyter.jupyter ~jupyter/.jupyter
