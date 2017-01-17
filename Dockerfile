@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.5
 # MAINTAINER AlpineD <alpined@x1g.com> | http://alpined.x1g.com
 
 # root filesystem
