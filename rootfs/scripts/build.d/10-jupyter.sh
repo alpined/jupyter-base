@@ -26,10 +26,9 @@ if 'PASSWORD' in os.environ:
         from IPython.lib import passwd
         c.NotebookApp.password = passwd(os.environ['PASSWORD'])
     del os.environ['PASSWORD']
-else:
-    from IPython.lib import passwd
-    c.NotebookApp.password = passwd('passw0rd')
-
+    # Disnable 'token' based authentication
+    c.NotebookApp.token = u''
 __EOF__
+# else default to the token based authentication
 
 chown -R jupyter.jupyter ~jupyter/.jupyter
